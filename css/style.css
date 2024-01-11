@@ -638,6 +638,9 @@ body::before {
   .footer-container__copyright, .footer-container__design {
     align-self: flex-end;
     font-family: "PlayfairDisplay-Regular"; }
+    @media only screen and (max-width: 37.5em) {
+      .footer-container__copyright, .footer-container__design {
+        display: none; } }
 
 @keyframes fromAbove {
   0% {
