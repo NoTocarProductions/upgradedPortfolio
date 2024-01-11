@@ -1,0 +1,91 @@
+@keyframes fromAbove {
+    0% {
+        top: -100%;
+    }
+    80% {
+        top: 5%;
+    }
+    85% {
+        top: -3%
+    }
+    90% {
+        top: 3%
+    }
+    95% {
+        top: -1.5%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+.fromAboveAnimation {
+    animation: fromAbove ease-in-out 3s;
+}
+@keyframes fromLeft {
+    0% {
+        left: -100%;
+    }
+    90% {
+        left: 20%
+    }
+    100% {
+        left: 12%;
+    }
+}
+@keyframes fromRight {
+    0% {
+        right: -100%;
+    }
+    90% {
+        right: 20%
+    }
+    100% {
+        right: 12%;
+    }
+}
+
+@keyframes fromBelow {
+    0% {
+        top: 300%;
+    }
+    90% {
+        top: 150%
+    }
+    100% {
+        top: 120%;
+    }
+}
+@keyframes lit {
+    0% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+
+@keyframes disAppear {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+.disAppearNav {
+    animation-duration: 2s;
+    animation-name: disAppear;
+  }
+.hide {
+    display: none;
+  }

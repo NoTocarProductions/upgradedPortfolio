@@ -1,0 +1,167 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Libre+Baskerville:wght@400;700&family=Merriweather:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap");
+@font-face {
+    font-family: "PlayfairDisplay-SemiBold";
+    src: url("fonts/PlayfairDisplay-SemiBold.ttf");
+  }
+  @font-face {
+    font-family: "PlayfairDisplay-Bold";
+    src: url("fonts/PlayfairDisplay-Bold.ttf");
+  }
+  @font-face {
+    font-family: "PlayfairDisplay-MediumItalic";
+    src: url("fonts/PlayfairDisplay-MediumItalic.ttf");
+  }
+  @font-face {
+    font-family: "PlayfairDisplay-Regular";
+    src: url("fonts/PlayfairDisplay-Regular.ttf");
+  }
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-Grey-light-1: #faf9f9;
+    --color-Grey-light-2: #f4f2f2;
+    --color-Grey-light-3: #f0eeee;
+    --color-Grey-light-4: #ccc;
+
+    --color-Grey-dark-1: #333;
+    --color-Grey-dark-2: #777;
+    --color-Grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+
+    --line: 1px solid var(--color-Grey-light-2);
+}
+
+$bp-largest: 75em; //1200px (1200/16)
+$bp-large: 68.75em; //1100px (1100/16)
+$bp-medium: 56.25em; //900px (900/16)
+$bp-small: 37.5em; //600px (600/16)
+$bp-smallest: 31.25em; //500px (500/16)
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; // 1rem = 8px
+    }
+}
+
+body {
+    font-family: DM Serif Text, serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--colorGrey-dark-2);
+    background-color: #0b0b0d;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    z-index: -1;
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    left: -10rem;
+    z-index: 9999;
+    top: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    background-image: url('../img/noiseFive.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    pointer-events: none;
+    animation: noise 1s steps(2) infinite;
+    z-index: -10;
+  }
+  
+  @-webkit-keyframes noise {
+    to {
+      transform: translate3d(-7rem, 0, 0);
+    }
+  }
+  
+  @keyframes noise {
+    0% {
+      transform: translate3d(0, 9rem, 0);
+    }
+  
+    10% {
+      transform: translate3d(-1rem, -4rem, 0);
+    }
+  
+    20% {
+      transform: translate3d(-8rem, 2rem, 0);
+    }
+  
+    30% {
+      transform: translate3d(9rem, -9rem, 0);
+    }
+  
+    40% {
+      transform: translate3d(-2rem, 7rem, 0);
+    }
+  
+    50% {
+      transform: translate3d(-9rem, -4rem, 0);
+    }
+  
+    60% {
+      transform: translate3d(2rem, 6rem, 0);
+    }
+  
+    70% {
+      transform: translate3d(7rem, -8rem, 0);
+    }
+  
+    80% {
+      transform: translate3d(-9rem, 1rem, 0);
+    }
+  
+    90% {
+      transform: translate3d(6rem, -5rem, 0);
+    }
+  
+    to {
+      transform: translate3d(-7rem, 0, 0);
+    }
+  }
+  

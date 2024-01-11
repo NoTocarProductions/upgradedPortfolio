@@ -1,0 +1,553 @@
+.user-nav {
+  margin-top: 0.2rem;
+  height: 98%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0;
+  color: #f8f8f8;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.6;
+    font-size: 1.2rem;
+    border: 2px solid gray;
+    border-radius: 5rem;
+    padding: 1px 10px;
+    &:hover {
+      border: 2px solid #b76b28;
+      color: #b76b28
+    }
+  }
+
+  &__title {
+    border: 3px solid gray;
+    padding: 1px 10px;
+    font-size: 2.2rem;
+    border-radius: 5rem;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+}
+
+.hero-section {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__video {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 45% 40%;
+    height: 48rem;
+    width: 40rem;
+    opacity: 0.9;
+    border-radius: 40px;
+    top: 12%;
+    box-shadow: 20px 20px 20px black, inset 20px 20px 20px hsl(0, 0%, 0%);
+    @media only screen and (max-width: $bp-large) {
+      height: 57.6rem;
+      width: 48rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 52.8rem;
+      width: 44rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      height: 48rem;
+      width: 40rem;
+    }
+  }
+  &__titles {
+    position: relative;
+    height: 48rem;
+    width: 40rem;
+    margin: auto;
+    &__viktor {
+      position: absolute;
+      color: #fcf1dcd1;
+      text-shadow: 0 4px hsla(0, 0%, 0%, 0.2);
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0;
+      font-size: 12rem;
+      letter-spacing: 0.1em;
+      font-family: "PlayfairDisplay-SemiBold";
+      animation: fromAbove cubic-bezier(0.98, 0.9, 0, 0.93) 1s;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 10rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        font-size: 8rem;
+        top: 8%;
+      }
+    }
+    &__creative {
+      color: #f8f8f8;
+      opacity: 0.7;
+      position: absolute;
+      top: 30rem;
+      left: -25rem;
+      letter-spacing: 0.1em;
+      font-size: 7.2rem;
+      text-transform: capitalize;
+      font-family: "PlayfairDisplay-MediumItalic";
+      animation: fromLeft cubic-bezier(0.98, 0.9, 0, 0.93) 1s;
+      @media only screen and (max-width: $bp-medium) {
+        left: -18rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+        left: -6rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        left: -4rem;
+      }
+    }
+    &__website {
+      color: #f8f8f8;
+      opacity: 0.7;
+      position: absolute;
+      top: 35rem;
+      right: -25rem;
+      letter-spacing: 0.1em;
+      font-size: 7.2rem;
+      text-transform: capitalize;
+      font-family: "PlayfairDisplay-MediumItalic";
+      animation: fromRight cubic-bezier(0.98, 0.9, 0, 0.93) 1s;
+      @media only screen and (max-width: $bp-medium) {
+        right: -18rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+        right: -6rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        right: -3rem;
+      }
+    }
+    &__dev {
+      color: #fcf1dcd1;
+      text-shadow: 0 4px hsla(0, 0%, 0%, 0.2);
+      position: absolute;
+      top: 106%;
+      left: 50%;
+      transform: translateX(-50%);
+      letter-spacing: 0.1em;
+      font-size: 8rem;
+      text-transform: capitalize;
+      font-family: "PlayfairDisplay-MediumItalic";
+      animation: fromBelow cubic-bezier(0.98, 0.9, 0, 0.93) 1s;
+      
+      @media only screen and (max-width: $bp-large) {
+        top: 132%;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        top: 136%;
+        font-size: 6rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        top: 126%;
+        font-size: 5.2rem;
+      }
+    }
+  }
+}
+
+.about-me {
+  & p {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    width: 60%;
+    margin: auto;
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem;
+      width: 100%;
+    }
+  }
+}
+
+.about-who {
+  width: 80rem;
+  height: 72rem;
+  position: relative;
+  @media only screen and (max-width: $bp-small) {
+    width: 40rem;
+    height: 36rem;
+  }
+  & p {
+    position: absolute;
+    color: white;
+    text-shadow: 0 2px hsla(0, 0%, 0%, 0.2);
+    border-radius: 12px;
+    padding: 8px 8px;
+    font-family: "PlayfairDisplay-Regular";
+    font-size: 2.4rem;
+    box-shadow: 0 0 50px 2px rgba(103, 154, 204, 0.3);
+    background: rgb(206, 142, 65);
+    background: linear-gradient(
+      0deg,
+      rgba(206, 142, 65, 1) 0%,
+      rgba(238, 234, 138, 1) 0%,
+      rgba(142, 1, 1, 1) 100%
+    );
+    // right: 50%;
+    // transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+    }
+    &:first-child {
+      top: 35%;
+      left: 20%;
+      @media only screen and (max-width: $bp-small) {
+        left: 50%;
+      }
+    }
+    &:nth-child(2) {
+      top: 35%;
+      right: 20%;
+      @media only screen and (max-width: $bp-medium) {
+        right: 40%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        right: 50%;
+        top: 40%;
+      }
+    }
+
+    &:nth-child(4) {
+      top: 50%;
+      left: 60%;
+      @media only screen and (max-width: $bp-medium) {
+        left: 40%;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: -20rem;
+    height: 100%;
+    background-image: url("../img/NoTocarNoBackGroundC.png");
+    background-size: cover;
+    animation: lit 3.5s ease-out infinite;
+    z-index: -2;
+  }
+
+  &__title {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4.8rem;
+    line-height: 1.2;
+    color: #fcf1dcd1;
+    & h1 {
+      text-shadow: 0 4rem 8rem hsl(0, 0%, 100%);
+    }
+  }
+}
+
+.about-text {
+  position: relative;
+  & p {
+    font-family: "PlayfairDisplay-Regular";
+    font-size: 2.2rem;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 4rem;
+    }
+    & span {
+      color: #fcf1dcd1;
+      text-shadow: 0 2px 8px hsl(0, 0%, 100%);
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.photography-content {
+  height: 30%;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+  padding: 2rem;
+  @media only screen and (max-width: $bp-small) {
+    padding: 0.5rem;
+  }
+  &__text {
+    width: 45%;
+    height: 100%;
+    @media only screen and (max-width: $bp-medium) {
+      width: 80%;
+      margin-bottom: 4rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 95%;
+    }
+    & h2 {
+      font-size: 5.2rem;
+      font-family: "PlayfairDisplay-SemiBold";
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 2%;
+      color: white;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 4.2rem;
+
+      }
+    }
+    & p {
+      font-family: "PlayfairDisplay-Regular";
+      margin: auto;
+      text-align: center;
+      width: 80%;
+      font-size: 1.8rem;
+    }
+  }
+  &__pseudo {
+    display: inline-block;
+    background-size:cover;
+    border-radius: 2rem;
+    height: 100%;
+    width: 45%;
+    box-shadow: 0 0 50px 2px rgba(103, 154, 204, 0.3);
+    width: 60%;
+    @media only screen and (max-width: $bp-medium) {
+      width: 85%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 95%;
+    }
+
+
+  }
+  &__left {
+    order: 0;
+    background-size: cover;
+    box-shadow: 0 0 50px 2px rgba(103, 154, 204, 0.3);
+    @media only screen and (max-width: $bp-medium) {
+      order: 1;
+    }
+  }
+  &__right {
+    order: 1;
+    @media only screen and (max-width: $bp-medium) {
+      order: 0;
+    }
+  }
+}
+
+.gallery-container {
+  width: 95%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 auto 10rem auto;
+  @media only screen and (max-width: $bp-large) {
+    margin-bottom: 10rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    padding: 0.5rem;
+  }
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media only screen and (max-width: $bp-medium) {
+      width: 85%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 95%;
+    }
+
+
+    & img {
+      height: 16rem;
+      width: 20%;
+      object-fit: cover;
+      align-self: center;
+      border-radius: 1rem;
+      padding: 5px;
+      &:hover {
+        box-shadow: 0 0 20px 2px rgba(103, 154, 204, 0.3);
+      }
+      @media only screen and (max-width: $bp-small) {
+        height: 9rem;
+      }
+    }
+  }
+}
+
+#coverImageOne {
+  background-image: url("../img/PhotographyMe/PB94.jpg");
+  height: 50rem;
+  @media only screen and (max-width: $bp-small) {
+    height: 30rem;
+  }
+}
+#coverImageTwo {
+  background-image: url("../img/DSC04398.jpg");
+  height: 50rem;
+  @media only screen and (max-width: $bp-small) {
+    height: 30rem;
+  }
+}
+
+.cases-container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+  }
+  &__text {
+    width: 30%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      gap: 2rem;
+    }
+    & h2 {
+      font-size: 5.2rem;
+      font-family: "PlayfairDisplay-SemiBold";
+      text-align: center;
+      line-height: 1.2;
+      color: white;
+      font-size: 4.2rem;
+
+    }
+    & p {
+      font-family: "PlayfairDisplay-Regular";
+      margin: auto;
+      text-align: center;
+      width: 80%;
+      font-size: 1.8rem;
+    }
+  }
+  &__list {
+    font-family: "PlayfairDisplay-Regular";
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    font-size: 1.8rem;
+    list-style-image: url("../img/candle.png");
+    line-height: 4rem;
+    @media only screen and (max-width: $bp-large) {
+      list-style-position: inside;
+    }
+  }
+  &__table {
+    height: 100%;
+    flex: 1;
+    padding: 2rem;
+    & tbody {
+      box-shadow: 0 0 50px 2px rgba(103, 154, 204, 0.3);
+      border-radius: 1rem;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+      overflow: hidden;
+      background-position: 50% 50%;
+      background-color: transparent;
+      & tr {
+        width: 100%;
+        & td {
+          width: 20%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+          padding: 5px 10px;
+          & img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            border: 1px solid #fcf1dcd1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+
+    &__text {
+      font-size: 16px;
+      color: hsl(0, 0%, 90%);
+      text-align: center;
+    }
+    &__box {
+      padding: 2.4rem 1.6rem;
+      font-size: 3rem;
+      border: 0.5px dotted white;
+      border-radius: 1.6rem;
+      cursor: pointer;
+      &:hover {
+        border: 0.5px dotted #b76b28;
+        color: #b76b28;
+      }
+    }
+    &__icons {
+      display: flex;
+      justify-content: space-evenly;
+      width: 60%;
+
+      & a img {
+        background-color: #fff;
+        border-radius: 20px;
+        &:hover {
+          background-color: #b76b28;
+        }
+      }
+    }
+  }
+
+  &__copyright,
+  &__design {
+    align-self: flex-end;
+    font-family: "PlayfairDisplay-Regular";
+  }
+
+
+}
