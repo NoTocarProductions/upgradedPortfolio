@@ -19,19 +19,19 @@ Grey dark 3: #999
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap");
 @font-face {
   font-family: "PlayfairDisplay-SemiBold";
-  src: url("fonts/PlayfairDisplay-SemiBold.ttf"); }
+  src: url("../fonts/PlayfairDisplay-SemiBold.ttf"); }
 
 @font-face {
   font-family: "PlayfairDisplay-Bold";
-  src: url("fonts/PlayfairDisplay-Bold.ttf"); }
+  src: url("../fonts/PlayfairDisplay-Bold.ttf"); }
 
 @font-face {
   font-family: "PlayfairDisplay-MediumItalic";
-  src: url("fonts/PlayfairDisplay-MediumItalic.ttf"); }
+  src: url("../fonts/PlayfairDisplay-MediumItalic.ttf"); }
 
 @font-face {
   font-family: "PlayfairDisplay-Regular";
-  src: url("fonts/PlayfairDisplay-Regular.ttf"); }
+  src: url("../fonts/PlayfairDisplay-Regular.ttf"); }
 
 :root {
   --color-primary: #eb2f64;
